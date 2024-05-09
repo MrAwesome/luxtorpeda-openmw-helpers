@@ -1,7 +1,7 @@
 #!/usr/bin/env xdg-open
 [Desktop Entry]
 Name=Add OpenMW to Steam
-Exec=bash -c 'rm -f /tmp/add_openmw_to_steam.sh; curl -S -s -L -O --output-dir /tmp --connect-timeout 60 "https://github.com/MrAwesome/luxtorpeda-openmw-helpers/releases/latest/download/add_openmw_to_steam.sh" || err=1; [ -z "$err" ] && bash /tmp/add_openmw_to_steam.sh || err=2; [ ! -z "$err" ] && ( echo "Something went wrong. Are you connected to the Internet? If this looks like a bug, please report it at: https://github.com/MrAwesome/luxtorpeda-openmw-helpers/issues"; read )'
+Exec=bash -c 'rm -f /tmp/add_openmw_to_steam.sh; curl -S -s -L -O --output-dir /tmp --connect-timeout 60 "https://github.com/MrAwesome/luxtorpeda-openmw-helpers/raw/main/add_openmw_to_steam.sh" || err=1; [ -z "$err" ] && bash /tmp/add_openmw_to_steam.sh || err=2; [ ! -z "$err" ] && ( echo "Something went wrong. Are you connected to the Internet? If this looks like a bug, please report it at: https://github.com/MrAwesome/luxtorpeda-openmw-helpers/issues"; read )'
 Icon=steamdeck-gaming-return
 Terminal=true
 Type=Application
