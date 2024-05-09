@@ -59,17 +59,6 @@ zenpid="$(cat "$zenpidfile"| head -n 1)"
 [ ! -z "$zenpid" ] && kill "$zenpid"
 rm -f $zenpidfile
 
-echo '====== Shutting down Steam... ======'
-if pgrep steam &> /dev/null; then
-    [ -z "$LUX_IGNORE_STEAM" ] && steam -shutdown &> /dev/null &
-    echo '====== Waiting 10 seconds for Steam to shut down... ======'
-    [ -z "$LUX_IGNORE_STEAM" ] && sleep 10
-else
-    echo '====== No running Steam client detected... ======'
-fi
-echo '====== Launching Steam... ======'
-[ -z "$LUX_IGNORE_STEAM" ] && nohup steam &> /dev/null &
-
 nohup zenity --info --width=600 --title='Set Luxtorpeda as Compatibility Layer' --text='Once Steam has restarted:
 
 1) Go to the game (e.g. Morrowind) in your Steam library.
@@ -81,6 +70,18 @@ You are done! Just launch your game normally in Steam.
 
 (For Morrowind, you probably want to start with "OpenMW Launcher" in Luxtorpeda. Under sun and sky, outlander.)
 ' &> /dev/null &
+
+echo '====== Shutting down Steam... ======'
+if pgrep steam &> /dev/null; then
+    [ -z "$LUX_IGNORE_STEAM" ] && steam -shutdown &> /dev/null &
+    echo '====== Waiting 10 seconds for Steam to shut down... ======'
+    [ -z "$LUX_IGNORE_STEAM" ] && sleep 10
+else
+    echo '====== No running Steam client detected... ======'
+fi
+echo '====== Launching Steam... ======'
+[ -z "$LUX_IGNORE_STEAM" ] && nohup steam &> /dev/null &
+
 sleep 1
 disown
 sleep 1
