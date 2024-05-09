@@ -70,7 +70,7 @@ fi
 echo '====== Launching Steam... ======'
 [ -z "$LUX_IGNORE_STEAM" ] && nohup steam &> /dev/null &
 
-zenity --info --width=600 --title='Set Luxtorpeda as Compatibility Layer' --text='Once Steam has restarted:
+nohup zenity --info --width=600 --title='Set Luxtorpeda as Compatibility Layer' --text='Once Steam has restarted:
 
 1) Go to the game (e.g. Morrowind) in your Steam library.
 2) Click Properties, then Compatibility on the left.
@@ -80,4 +80,4 @@ zenity --info --width=600 --title='Set Luxtorpeda as Compatibility Layer' --text
 You are done! Just launch your game normally in Steam.
 
 (For Morrowind, you probably want to start with "OpenMW Launcher" in Luxtorpeda. Under sun and sky, outlander.)
-'
+' &> /dev/null &
