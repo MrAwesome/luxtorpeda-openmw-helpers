@@ -30,7 +30,16 @@ else
     flatpak install flathub net.davidotek.pupgui2
 fi
 
-zenity --info --title='Install Luxtorpeda' --text="$(cat instructions-protonup.txt)" &
+zenity --info --title='Install Luxtorpeda' --text='
+Once protonup-qt is done installing and launching: 
+
+1) Click "Add version" in the bottom left
+2) Click the dropdown under "Compatibility tool"
+3) Select "Luxtorpeda"
+4) Click "Install" at the bottom. 
+
+Once it is installed, exit protonup-qt. The script should restart Steam for you.
+' &
 
 echo "====== Running protonup-qt... ======"
 
@@ -54,4 +63,12 @@ fi
 echo "====== Launching Steam... ======"
 nohup steam &> /dev/null &
 
-zenity --info --title='Set Luxtorpeda as Compatibility Layer' --text="$(cat instructions-luxtorpeda-compatibility.txt)" &
+zenity --info --title='Set Luxtorpeda as Compatibility Layer' --text='
+Once Steam has restarted:
+
+1) Go to Morrowind -> Properties -> Compatibility.
+2) Click "Force the use of a specific Steam Play compatibility tool"
+3) Select "Luxtorpeda" from the dropdown list.
+
+Launch Morrowind, select "OpenMW Launcher" from the list, and enjoy!
+' &

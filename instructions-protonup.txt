@@ -1,8 +1,0 @@
-Once protonup-qt is done installing and launching: 
-
-1) Click "Add version" in the bottom left
-2) Click the dropdown under "Compatibility tool"
-3) Select "Luxtorpeda"
-4) Click "Install" at the bottom. 
-
-Once it is installed, exit protonup-qt. The script should restart Steam for you.
