@@ -81,3 +81,4 @@ You are done! Just launch your game normally in Steam.
 
 (For Morrowind, you probably want to start with "OpenMW Launcher" in Luxtorpeda. Under sun and sky, outlander.)
 \' &> /dev/null &' &
+sleep 2
