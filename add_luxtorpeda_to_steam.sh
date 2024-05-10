@@ -73,7 +73,7 @@ You are done! Just launch your game normally in Steam.
 
 echo '====== Shutting down Steam... ======'
 if pgrep steam &> /dev/null; then
-    [ -z "$LUX_IGNORE_STEAM" ] && steam -shutdown &> /dev/null &
+    [ -z "$LUX_IGNORE_STEAM" ] && steam -shutdown &> /dev/null
     echo '====== Waiting 10 seconds for Steam to shut down... ======'
     [ -z "$LUX_IGNORE_STEAM" ] && sleep 10
 else
