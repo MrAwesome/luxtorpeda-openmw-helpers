@@ -59,7 +59,7 @@ zenpid="$(cat "$zenpidfile"| head -n 1)"
 [ ! -z "$zenpid" ] && kill "$zenpid"
 rm -f $zenpidfile
 
-nohup zenity --info --width=600 --title='Set Luxtorpeda as Compatibility Layer' --text='Once Steam has restarted:
+nohup zenity --info --width=600 --title='Set Luxtorpeda as Compatibility Layer in Steam' --text='Once Steam has restarted:
 
 1) Go to the game (e.g. Morrowind) in your Steam library.
 2) Click Properties, then Compatibility on the left.
