@@ -1,7 +1,7 @@
 #!/usr/bin/env xdg-open
 [Desktop Entry]
 Name=Install Luxtorpeda
-Exec=bash -xc 'rm -f /tmp/add_luxtorpeda_to_steam.sh; curl -S -s -L -O --output-dir /tmp --connect-timeout 60 "https://github.com/MrAwesome/luxtorpeda-openmw-helpers/raw/main/install-luxtorpeda.sh" || err=1; [ -z "$err" ] && bash /tmp/install-luxtorpeda.sh || err=2; [ ! -z "$err" ] && ( echo "Something went wrong. Are you connected to the Internet? If this looks like a bug, please report it at: https://github.com/MrAwesome/luxtorpeda-openmw-helpers/issues"; read )'
+Exec=bash -xc 'rm -f /tmp/add_luxtorpeda_to_steam.sh; curl -S -s -L -O --output-dir /tmp --connect-timeout 60 "https://github.com/MrAwesome/luxtorpeda-openmw-helpers/raw/main/install-luxtorpeda.sh" || err=1; [ -z "$err" ] && bash /tmp/install-luxtorpeda.sh || err=2; [ ! -z "$err" ] && ( echo "Something went wrong. Are you connected to the Internet? If this looks like a bug, please report it at: https://github.com/MrAwesome/luxtorpeda-openmw-helpers/issues" ); read'
 Icon=steamdeck-gaming-return
 Terminal=true
 Type=Application
