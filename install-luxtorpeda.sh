@@ -45,6 +45,11 @@ while (( "$#" )); do
     esac
 done
 
+# The first version of this script incorrectly created protonutils as non-execute, so fix that
+if [[ -f "$local_bin_dir"/protonutils ]] && [[ ! -x "$local_bin_dir"/protonutils ]]; then
+    chmod +x "$local_bin_dir"/protonutils
+fi
+
 if ! command -v protonutils &> /dev/null; then
     echo "No protonutils found on local system, will install it now..."
     if command -v yay; then
