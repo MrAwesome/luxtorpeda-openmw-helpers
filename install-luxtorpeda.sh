@@ -54,6 +54,7 @@ if ! command -v protonutils &> /dev/null; then
         echo "Downloading protonutils to ${local_bin_dir}"
         mkdir -p "$local_bin_dir"
         curl -S -s -L -O --output-dir "$local_bin_dir" --connect-timeout 60 https://github.com/nning/protonutils/releases/latest/download/protonutils
+        chmod +x "$local_bin_dir"/protonutils
     fi
 fi
 
