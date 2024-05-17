@@ -1,10 +1,12 @@
-# Install Luxtorpeda/OpenMW on Steam Deck
+# Install Luxtorpeda on Steam Deck / Desktop Linux
+## _Run OpenMW, Daggerfall Unity, etc. through Steam._
 
-Simply go here in Desktop Mode:
+### Instructions:
+1) Go to https://luxtorpeda.lol
+2) Run the installer.
 
-https://luxtorpeda.lol 
-
-Then run the provided installer.
-There should be no additional steps required, besides perhaps a restart of your Deck.
-
-(You can also go to https://openmw.lol. They both point to the same place, and are provided just for convenience.)
+### To run from the command line:
+```bash
+# Run as your user! Do not run as root or with sudo.
+rm -f /tmp/install-luxtorpeda.sh; curl -S -s -L -O --output-dir /tmp --connect-timeout 60 "https://github.com/MrAwesome/luxtorpeda-openmw-helpers/raw/main/install-luxtorpeda.sh"; bash -x /tmp/install-luxtorpeda.sh
+```
