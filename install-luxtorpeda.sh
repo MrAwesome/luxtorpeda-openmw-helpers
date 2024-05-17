@@ -74,12 +74,21 @@ if [[ "$game_id" == "NONE" ]]; then
 else 
     echo 'Shutting down Steam in 5 seconds...'
     sleep 5
-    steam -shutdown
+    echo 'Shutting down Steam...'
+    steam -shutdown &> /dev/null || true
     sleep 10
-    protonutils compattool set "$game_id" luxtorpeda
+    luxtorpeda_id="$(protonutils compattool list | grep -i luxtorpeda | tail -n 1)"
+    protonutils compattool set "$game_id" "$luxtorpeda_id"
+    echo
+    echo
+    echo "Luxtorpeda is installed, and should be set as the launcher for your game! You should be able to launch your game directly through Steam now. If Luxtorpeda doesn't launch when you do, go to Properties for your game in the Steam library, select Compatibility on the left side, and choose Luxtorpeda from the list there."
     echo 
+    echo "Restarting Steam now."
     nohup steam &> /dev/null &
     if [[ "$is_steamos" == "1" ]]; then
         echo "Your on-screen keyboard may stop working after the restart of Steam. Simply restart the Deck and it will work again."
     fi
+
+    echo
+    echo "Done!"
 fi
